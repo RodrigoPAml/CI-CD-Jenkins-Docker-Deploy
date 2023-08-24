@@ -1,6 +1,6 @@
 # Docker-Deploy
 
-Some dockerfiles and scripts to create postgres with C# and NextJS Back-End/Front-End
+Some dockerfiles and scripts to create a complete application with postgres with C# and NextJS Back-End/Front-End running in docker containers
 
 # Database
   - Docker file and compose to setup a postgres database
