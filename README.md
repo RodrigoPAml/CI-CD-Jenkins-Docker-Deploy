@@ -2,6 +2,11 @@
 
 Some dockerfiles and scripts to create a complete application with postgres with C# and NextJS Back-End/Front-End running in docker containers
 
+Can be used to deploy the repositories 
+  - https://github.com/RodrigoPAml/BadgesWebsite
+  - https://github.com/RodrigoPAml/ASP-NET-Base-project
+  - https://github.com/RodrigoPAml/Next-JS-Base-Repo
+
 # Database
   - Docker file and compose to setup a postgres database
 
