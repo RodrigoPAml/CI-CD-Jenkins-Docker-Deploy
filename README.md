@@ -21,7 +21,16 @@ Some dockerfiles and scripts to create a complete application with postgres with
 
 # Check Database and Back-End connectivity
 
-Inside the back-end docker bash run
+Inside the back-end docker bash run (docker exec -it [container-id] bash)
+
+Install depencies if needed
+
+```
+  su
+  apt update
+  apt install ping
+```
+then
 
 ```
   ping postgres
