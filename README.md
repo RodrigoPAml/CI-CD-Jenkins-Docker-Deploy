@@ -18,3 +18,11 @@ Some dockerfiles and scripts to create a complete application with postgres with
 ./start_back.sh
 ./start_front.sh
 ```
+
+# Check Database and Back-End connectivity
+
+Inside the back-end docker bash run
+
+```
+  ping postgres
+```
