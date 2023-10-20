@@ -1,0 +1,38 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Pull Docker Image') {
+            steps {
+                script {
+                    // Define the Docker image name and tag
+                    def dockerImage = 'API:latest'
+
+                    // Pull the Docker image
+                    sh "docker pull $dockerImage"
+                }
+            }
+        }
+
+        stage('Run ASP.NET Application in Docker') {
+            steps {
+                script {
+                    // Run the ASP.NET application within the Docker container
+                    def dockerImage = 'API:latest'
+
+                    sh "docker run -d -p 80:80 --name my-aspnet-app $dockerImage"
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            // Clean up by stopping and removing the container
+            script {
+                sh "docker stop my-aspnet-app"
+                sh "docker rm my-aspnet-app"
+            }
+        }
+    }
+}

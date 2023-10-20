@@ -1,0 +1,51 @@
+pipeline {
+    agent any
+
+    environment {
+        DOTNET_CLI_HOME = tool 'dotnet'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Build') {
+            steps {
+                script {
+                    // Restore NuGet packages and build the ASP.NET project
+                    sh "dotnet restore"
+                    sh "dotnet build"
+                }
+            }
+        }
+
+        stage('Test') {
+            steps {
+                script {
+                    // Run unit tests
+                    sh "dotnet test"
+                }
+            }
+        }
+
+        stage('Publish') {
+            steps {
+                script {
+                    // Publish the ASP.NET application
+                    sh "dotnet publish -c Release -o ./publish"
+                }
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                script {
+                   sh "donet API.dll"
+                }
+            }
+        }
+    }
+}
