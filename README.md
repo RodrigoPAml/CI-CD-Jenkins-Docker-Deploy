@@ -9,6 +9,8 @@ Can be used to deploy the repositories
 
 ## Continuous Integration and Continuous Deployment (CI/CD)
 
+CI/CD stands for Continuous Integration and Continuous Deployment (or Continuous Delivery), and they are practices in software development and DevOps that help automate and streamline the process of building, testing, and deploying software.
+
 **Continuous Integration (CI):**
 - Continuous Integration (CI) is a development practice where developers frequently integrate their code changes into a shared repository, typically multiple times a day.
 - Each integration triggers an automated build and a set of tests to ensure that the new code doesn't break existing functionality.
