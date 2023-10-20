@@ -1,6 +1,6 @@
 # Repository
 
-Some jenkinsfiles and dockerfiles with scripts to create a complete application with postgres with C# and NextJS Back-End/Front-End running in docker containers
+Some jenkinsfiles and dockerfiles with scripts to create a complete application with postgres, C# and NextJS Back-End/Front-End running in docker containers
 
 Can be used to deploy the repositories 
   - https://github.com/RodrigoPAml/BadgesWebsite
